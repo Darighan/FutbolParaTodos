@@ -47,7 +47,7 @@
                         <div class="botones">
                             <input type="submit" class="btn btn-success" name='aceptar'></input>
 
-                            <a class="btn btn-danger" href="./login.php">Cancelar</a>
+                            <a class="btn btn-danger" href="index.php">Cancelar</a>
 
                            
                         </div>

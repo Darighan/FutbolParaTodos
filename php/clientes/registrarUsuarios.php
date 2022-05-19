@@ -15,7 +15,7 @@
 
         $resultado = mysqli_query($conexion, $consulta) or die ('Error: '. mysqli_error($conexion));
 
-        include('../../vistas/Cliente/login.php');
+        header('location: ../../index.php');
         
     }
 ?>
