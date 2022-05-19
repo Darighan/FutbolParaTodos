@@ -9,11 +9,13 @@
         $telefono = trim($_POST['telefono']);
         $password = trim($_POST['password']);
 
-        $consulta = "INSERT INTO `clientes`(`nombre`, `correo`, `telefono`, `nacimiento`, `password`) VALUES ('$nombre','$correo','$telefono','$nacimiento','$password')";
+        $md5pw = md5($password);
+
+        $consulta = "INSERT INTO `clientes`(`nombre`, `correo`, `telefono`, `nacimiento`, `password`) VALUES ('$nombre','$correo','$telefono','$nacimiento','$md5pw')";
 
         $resultado = mysqli_query($conexion, $consulta) or die ('Error: '. mysqli_error($conexion));
 
-        include('../../vistas/Cliente/login.php');
+        header('location: ../../index.php');
         
     }
 ?>
